@@ -1,0 +1,13 @@
+
+@mixin parallax-container($perspective: 1) {
+	@include perspective($perspective * 1px);
+	position: relative;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+@mixin parallax-element($distance, $perspective: 1) {
+	@include transform(translateZ($distance *1px) scale(1 + ($distance * -1) / $perspective));
+	position: relative;
+}

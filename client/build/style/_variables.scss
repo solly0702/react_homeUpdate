@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans|Lobster+Two|Ruslan+Display|Yatra+One);
+
+//breakPoint
+$mobile: 550px;
+$tablet: 700px;
+$medium: 960px;
+$wide: 1200px;
+
+//  color pallette
+$bgMainColor        :rgb(16, 34, 43);
+$bgNavColor         :rgb(149, 171, 99);
+$bgFooterColor      :rgb(189, 214, 132);
+$ftHeaerColor       :rgb(246, 255, 224);
+$ftSubColor         :rgb(226, 240, 214);
+
+//  font family
+$mainFont: 'Open Sans', sans-serif;
+$logoFont: 'Ruslan Display', cursive;
+$nameFont: 'Yatra One', cursive;
+$optFont: 'Kaushan Script', cursive;
+$headerFont: 'Lobster Two', cursive;
+
+// weight
+$thin     : 200;
+$normal   : 400;
+$bold     : 600;
+$heavy    : 800;
+
+
+$header-background: rgb(11, 175, 193);
+$body-background: rgb(8, 224, 91);
+$footer-background: rgb(234, 169, 39);
+
+
+.header {
+  background-color: $header-background;
+}
+
+.body {
+  background-color: $body-background;
+}
+
+.footer {
+  background-color: $footer-background;
+}

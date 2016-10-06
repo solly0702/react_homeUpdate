@@ -1,0 +1,51 @@
+nav {
+  min-height: 100px;
+  padding-top: 10px;
+  background-color: $bgNavColor;
+
+  .brand-logo {
+    h3 {
+      padding-bottom: 10px;
+      @include text-shadow($bgMainColor 0 0 20px);
+      @include breakpoint(max-width $mobile) {
+        padding-top: 10px;
+        font-size: 0.8em;
+      }  // breakpoint
+    }  // h3
+    p {
+      font-family: $nameFont;
+      text-align: center;
+      color: $ftSubColor;
+      @include breakpoint(max-width $mobile) {
+        font-size: 0.7em;
+      }  // breakpoint
+    }  //p
+  }  // brand-logo
+
+  .left {
+    padding-top: 30px;
+    font-family: $optFont;
+    weight: $normal;
+
+    li {
+      a {
+        font-size: 1.2em;
+      }  // a
+
+      &:hover {
+        a {
+          font-size: 1.5em;
+        }  // a
+      }  // hover
+    }  // li
+  }  // left
+
+  #nav-mobile {
+    font-family: $optFont;
+    weight: $normal;
+  }//  nav-mobile
+
+  .button-collapse {
+    padding-left: 10px;
+  }  // button-collape
+}  // nav
