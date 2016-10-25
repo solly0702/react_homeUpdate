@@ -1,0 +1,21 @@
+.skills {
+  margin-top: 60px;
+  .container {
+    @extend .grey, .lighten-4;
+    width: 80%;
+    padding: 30px 30px;
+    @include border-radius(20px);
+  }
+  h4 {
+    text-align: center;
+  }
+  h5 {
+    @extend .grey-text, .text-darken-2;
+    text-align: center;
+    margin: 0;
+  }
+  .icons {
+    text-align: center;
+    margin: 0;
+  }
+}
