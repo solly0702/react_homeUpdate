@@ -6,18 +6,18 @@ var webpack = require('webpack');
 module.exports = {
     devServer: {
         historyApiFallback: true,
-        contentBase: "./build",
+        contentBase: "./client",
         inline: true,
-        port: 8080
+        port: 5050
     },
     devtool: 'eval',
     entry: {
-        bundle: './src/index.js',
-        vendor: ['react', 'jquery']
+        bundle: './client/src/index.js',
+        vendor: ['react']
     },
     output: {
-        path: path.resolve(__dirname, 'src/js'),
-        publicPath: '/js',
+        path: path.resolve(__dirname, "./client/build/js"),
+        publicPath: '/build/js',
         filename: '[name].min.js'
     },
     resolve: {
@@ -28,8 +28,8 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loaders: ['babel'],
                 exclude: /(node_modules|bower_components)/,
+                loaders: ['babel'],
             },
             {
                 test: /\.scss/,
@@ -39,7 +39,7 @@ module.exports = {
             },
             {
               test: /\.(png|jpg)$/,
-              loader: "url-loader?limit=100000"
+              loader: "url-loader?limit=300000"
             },
             {
               test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -51,14 +51,18 @@ module.exports = {
         // new BundleTracker({filename: '../webpack-stats.json'}),        // python django only!
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
-        new webpack.optimize.DedupePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production')
-        }),
         new webpack.optimize.UglifyJsPlugin({
         compress: {warnings: false},
-        mangle: false,
-        sourceMap: false
+        // sourceMap: false,
+        mangle: false
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: 'vendor.js',
+            minChunks: Infinity
+        }),
+        new webpack.optimize.DedupePlugin({
+        'process.env.NODE_ENV': JSON.stringify('production')
         })
     ]
 };

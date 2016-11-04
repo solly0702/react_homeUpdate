@@ -1,0 +1,12 @@
+.flash-message {
+  .card {
+    @include border-radius(25px)
+    .card-content {
+      font-size: 0.8em;
+      button {
+        @include border-radius(50%);
+        text-align: center;
+      }
+    }
+  }
+}

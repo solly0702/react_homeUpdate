@@ -1,0 +1,16 @@
+form {
+  font: $thin 1.2em/1.0em $lato;
+
+  .input-field {
+    input {
+      margin-bottom: 3px;
+    }
+    textarea {
+      margin-bottom: 3px;
+    }
+    .errors {
+      font-size: 0.7em;
+      color: $error;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+#nav-bar {
+  box-shadow: 0 0;
+  background-color: transparent;
+
+  .container {
+    .brand-logo {
+      @extend .light-blue-text, .text-accent-4;
+      font: $logoFont;
+    }  // brand-logo
+    li{
+      a {
+        font: $manuFont;
+        padding: 22px 10px;
+        &:hover {
+          font-size: 1.2em;
+        }    //hover
+      }    // a
+    }    // li
+    .side-nav {
+      background: transparent;
+      box-shadow: 1px 1px rgb(20, 20, 20);
+      .side-nav-logo {
+        @extend .light-blue-text, .text-accent-4;
+        font: $logoFont;
+        margin-bottom: 20px;
+        text-align: center;
+      }  // side-nav-logo
+      li {
+        a {
+          padding-left: 30px;
+          color: white;
+        }  // a
+      }  // li
+    }  // side-nav
+  }    // container
+}
