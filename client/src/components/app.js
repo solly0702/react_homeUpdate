@@ -7,7 +7,7 @@ import "../../style/style.scss";
 class App extends Component {
   render() {
     return (
-      <div id="top">
+      <div>
         {this.props.children}
         <Footer />
       </div>
