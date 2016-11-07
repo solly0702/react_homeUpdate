@@ -1,14 +1,7 @@
 .DS_Store
-<<<<<<< HEAD
 *.log
 *.tmp
+*.swp
 *.sass-cache
 node_modules/
 server/config/email_config
-=======
-.log
-.tmp
-.sass-cache
-node_modules
-.webpack-stats
->>>>>>> 89a3808e81bb9440d4bcd61daedd3dd91a3a27b3

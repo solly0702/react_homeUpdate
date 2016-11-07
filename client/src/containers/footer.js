@@ -21,8 +21,8 @@ class Footer extends Component {
           <div class="row">
             <div class="col l6 m10 offset-m1">
               <section class="form-head" id="contact">
-                <h5><i>Would you like discuss something with me?</i></h5>
-                <p>You can email me at - <span><a href="mailto:solly0702@gmail.com">solly0702@gmail.com</a></span> or fill up the form below!</p>
+                <h5><i>Would you like to discuss something?</i></h5>
+                <p>You can email me at <span><a href="mailto:solly0702@gmail.com">solly0702@gmail.com</a></span> or submit the form below!</p>
               </section>
                 <FlashMessagesList />
                 <MsgForm msgSend={msgSend} addFlashMessage={addFlashMessage} />

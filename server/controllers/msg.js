@@ -10,30 +10,23 @@ const msg = () => ({
     const { errors, isValid } = validate(req.body);
 
     if(isValid) {
-      res.json({ success: true });
+      let mailOptions = {
+        from: req.body.email,
+        to: "solly0702@gmail.com",
+        subject: req.body.reason,
+        text: req.body.msg,
+        html: `<h2>Name: ${req.body.firstName} ${req.body.lastName}</h2>
+              <h3>Email: ${req.body.email}</h3>
+              <h3>Title: ${req.body.reason}</h3>
+              <h4>Message: ${req.body.msg}</h4>`
+      };
+
+      transporter.sendMail(mailOptions)
+      .then( data => res.json({ success: true }))
+      .catch( err => res.status(500).json({ error: err }))
     } else {
       res.status(400).json(errors);
     }
-
-    // let mailOptions = {
-    //   from: req.body.email,
-    //   to: "solly0702@gmail.com",
-    //   subject: req.body.reason,
-    //   text: req.body.msg,
-    //   html: `<h2>Name: ${req.body.firstName} ${req.body.lastName}</h2>
-    //         <h3>Email: ${req.body.email}</h3>
-    //         <h3>Title: ${req.body.reason}</h3>
-    //         <h4>Message: ${req.body.msg}</h4>`
-    // };
-    //
-    // transporter.sendMail(mailOptions,
-    //   (err, info) => {
-    //     if(err) {
-    //       console.log(err)
-    //     }
-    //     console.log(info.response)
-    //   },
-    // )
 
   }
 })

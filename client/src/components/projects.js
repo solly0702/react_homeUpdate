@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import reactHome from "../../statics/img/react_home.png";
 import prevaLearn from "../../statics/img/preva_learn.png";
 import dojoPool from "../../statics/img/dojopool.png";
+import CardFieldGroup from "./common/cardFieldGroup";
 
 function createCard(img, title, link, link_desc, func) {
   return (
@@ -27,7 +28,7 @@ function createCard(img, title, link, link_desc, func) {
   )
 }
 
-function reactHome_desc() {
+function reactHome_contaxt() {
   return(
     <ul>
       <li>•	Describes my professional experience and skills, including ability to implement self-taught knowledge of React with Redux architecture</li>
@@ -36,7 +37,7 @@ function reactHome_desc() {
   )
 }
 
-function prevaLearn_desc() {
+function prevaLearn_contaxt() {
   return(
     <ul>
       <li>•	Web application for individuals and organizations to advertise learning courses; all users are able to select their favorite courses and use course materials</li>
@@ -46,7 +47,7 @@ function prevaLearn_desc() {
   )
 }
 
-function dojoPool_desc() {
+function dojoPool_contaxt() {
   return(
     <ul>
       <li>•	Web application where users register, create login, upload and accept schedules and requests for joining carpools</li>
@@ -61,9 +62,30 @@ class Projects extends Component {
       <article class="projects" id="projects">
         <div class="container">
           <h4>PROJECTS</h4>
-          {createCard(reactHome, "SIMPLE REACT HOMEPAGE", "https://github.com/solly0702/react_homepage", "TO SEE THE SOURCE CODE FROM GITHUB", reactHome_desc())}
-          {createCard(prevaLearn, "PROJECT FROM FREELANCER.COM", "http://fathomless-basin-86556.herokuapp.com/", "TO VISIT THE PROJECT WEBSITE ON HEROHU", prevaLearn_desc())}
-          {createCard(dojoPool, "SIMPLE CARPOOL APPLICATION PAGE", "http://52.2.200.39/", "TO VISIT THE PROJECT WEBSITE ON AWS", dojoPool_desc())}
+          <CardFieldGroup
+            img={dojoPool}
+            title= "Simple Carpool Website"
+            link="http://52.2.200.39/"
+            link_desc="Click to go to the live DojoCarpool website on AWS"
+            contaxt={dojoPool_contaxt}
+          />
+
+          <CardFieldGroup
+            img={prevaLearn}
+            title= "PrevaLearn from freelancer.com"
+            link="http://fathomless-basin-86556.herokuapp.com/users/sign_in"
+            link_desc="Click to go to the live PrevaLearn website on Heroku"
+            contaxt={prevaLearn_contaxt}
+          />
+
+          <CardFieldGroup
+            img={reactHome}
+            title= "Simple React Homepage"
+            link="https://github.com/solly0702/react_homepage"
+            link_desc="Click to see the source code for Simple React Homepage"
+            contaxt={reactHome_contaxt}
+          />
+
         </div>
       </article>
     )

@@ -10,7 +10,7 @@ class AboutMe extends Component {
             <div class="row">
               <div class="col m10 s10 offset-m1 offset-s1">
                 <h4>ABOUT ME</h4>
-                <p>My name is Sol Lee, and I am full stack & software developer. I build a dynamic & responsive website from scratch. I love coding in Javascriipt, Python, Java and extra and learning new technologies. I am someone who loves problem solving, and discuss with people about different approches for problems. I love creating useful, beautiful and fun project with delightful people.</p>
+                <p>My name is Sol Lee, and I am a full stack and software developer. I build dynamic and responsive websites from scratch. I love coding in Javascript, Python, Java and others, as well as learning new technologies. I am someone who loves problem solving and discussing different approaches for problems with others. I love creating useful, beautiful and fun projects with cool people.</p>
               </div>
             </div>
             <div class="row">

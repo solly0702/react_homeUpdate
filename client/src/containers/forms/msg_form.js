@@ -38,19 +38,26 @@ class MsgForm extends Component {
 
   onSubmit(e) {
     e.preventDefault()
-    this.setState({ errors: {}, isLoading: true});
-    if (this.isValid()) {
+    if(this.isValid()) {
+      this.setState({ errors: {}, isLoading: true});
+
       this.props.msgSend(this.state).then(
-        (res) => {
+        () => {
           this.props.addFlashMessage({
             type: "success",
-            text: "Thank you. I will definitely contact you Soon!"
+            text: "Thank you. I will contact you soon!"
           });
-        },
-        (err) => this.setState({ errors: err.response.data, isLoading: false})
-      ).then(
-        () => {
-          this.setState({ isLoading: false, firstName: "", lastName: "" , email: "", reason: "", msg: ""});
+          this.setState({ isLoading: false, firstName: "", lastName: "" , email: "", reason: "", msg: "" })
+        }
+      ).catch(
+        (err) => {
+          if(err.response.status === 500) {
+            this.props.addFlashMessage({
+              type: "error",
+              text: "Internal Server Error, Please Try Again!"
+            })
+          }
+          this.setState({ errors: err.response.data, isLoading: false})
         }
       )
     }

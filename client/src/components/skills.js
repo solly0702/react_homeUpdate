@@ -10,7 +10,7 @@ class Skills extends Component {
             <div class="col m4">
               <section class="language">
                 <p class="icons"><i class="material-icons large">language</i></p>
-                <h5>LANGUAGE</h5>
+                <h5>LANGUAGES</h5>
                 <p>JavaScript, Python, Ruby, Java, C, HTML, CSS, SASS</p>
               </section>
             </div>
@@ -24,7 +24,7 @@ class Skills extends Component {
             <div class="col m4">
               <section class="dataset">
                 <p class="icons"><i class="material-icons large">input</i></p>
-                <h5>DATABASE</h5>
+                <h5>DATABASES</h5>
                 <p>MySQL, PostgreSQL, SQLite, and MongoDB</p>
               </section>
             </div>
