@@ -13,21 +13,23 @@
         padding: 22px 10px;
         &:hover {
           font-size: 1.2em;
+          transition: 0.4s;
         }    //hover
       }    // a
     }    // li
     .side-nav {
       background: transparent;
       box-shadow: 1px 1px rgb(20, 20, 20);
-      .side-nav-logo {
-        @extend .light-blue-text, .text-accent-4;
-        font: $logoFont;
-        margin-bottom: 20px;
-        text-align: center;
-      }  // side-nav-logo
+      position: fixed !important;
+      z-index: 1 !important;
+      overflow-x: hidden !important;
+      padding-top: 20%;
       li {
+        position: relative;
+        display: block;
+        z-index: 1;
         a {
-          padding-left: 30px;
+          text-align: center;
           color: white;
         }  // a
       }  // li

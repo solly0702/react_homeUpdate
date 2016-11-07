@@ -18,7 +18,6 @@ class Navbar extends Component {
               <li><a href="#contact">CONTACT</a></li>
             </ul>
             <ul class="side-nav" id="nav-mobile">
-              <p><a href="#top" class="side-nav-logo"></a></p>
               <li><a href="#top">Home</a></li>
               <li><a href="#about_me">ABOUT ME</a></li>
               <li><a href="#skills">SKILLS</a></li>

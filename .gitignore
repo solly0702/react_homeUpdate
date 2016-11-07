@@ -4,4 +4,4 @@
 *.swp
 *.sass-cache
 node_modules/
-server/config/email_config
+email_config.js

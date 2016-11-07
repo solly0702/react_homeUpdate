@@ -15,6 +15,11 @@ app.use(bodyParser.json({ type: "*/*" }));
 routes(app);
 
 // Static Files
+app.use(express.static(path.join(__dirname, '../client')));
+app.get("*", function(req, res) {
+  res.sendFile(path.resolve(__dirname, "../client", "index.html"))
+});
+
 
 // Server Setup
 const port = process.env.PORT || 5000;

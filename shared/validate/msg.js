@@ -1,4 +1,4 @@
-import Validator from "Validator";
+import Validator from "validator";
 import _ from "lodash";
 
 export default function validate(data) {

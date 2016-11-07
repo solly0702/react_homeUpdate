@@ -8,7 +8,7 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "server": "nodemon --watch server --exec babel-node -- server/server.js",
-    "postinstall": "webpack --progress --profile --colors",
+    "production": "export NODE_ENV=production pm2 start --interpreter babel-node server/server.js",
     "start": "webpack-dev-server"
   },
   "author": "Sol Lee <solly0702@gmail.com>",
